@@ -3,19 +3,23 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", defaults={"lang": ""}, name="homepage")
+     *
+     * @Route("/{lang}", name="homepage_user_input_lang")
+     *
      */
-    public function indexAction(Request $request)
+    public function indexAction($lang)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+
+        return $this->render('portfolio/index.html.twig', [
+            'lang' => $lang,
         ]);
     }
 }
