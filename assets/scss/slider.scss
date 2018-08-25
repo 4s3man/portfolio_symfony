@@ -1,0 +1,71 @@
+.slider .noJS div{
+  display: none;
+  &:first-child{
+    display: flex;
+    width: 100%;
+    height: 500px;
+  }
+}
+%tns__button{
+  button{
+    z-index: 2;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    &::before{
+      content:'•';
+      font-size: 2em;
+      color: black;
+    }
+  }
+}
+.tns{
+  &-outer{
+    position: relative;
+  }
+  &-nav{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10px;
+    @extend %tns__button;
+  }
+  &-controls{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %tns__button;
+    button{
+      &[data-controls="prev"]::before{
+        content: '⥢';
+        color: black;
+      }
+      &[data-controls="next"]::before{
+        content: '⥤';
+        color: black;
+      }
+    }
+  }
+}
+.slide{
+  height: 500px;
+  background-size: cover;
+  background-position: 0% 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title{
+    font-size: 2em;
+  }
+  &__link{
+    color: black;
+    text-decoration: none;
+  }
+  &--1{
+    background-image: url('./images/Nightfall.6e2583aa.6e2583aa.6e2583aa.png');
+  }
+}

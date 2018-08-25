@@ -1,8 +1,10 @@
-import '../scss/app.scss'
+$('.noJS').each(function(){
+  $(this).removeClass('noJS');
+});
 import $ from 'jquery'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/Main'
+require('./components/Slider');
 
-// ReactDOM.render(<App />, document.getElementById('app'));
 
+import '../scss/app.scss'
