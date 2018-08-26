@@ -5,16 +5,14 @@ var slider = tns({
   container: '.slider',
   items: 1,
   slideBy: 'page',
-  autoplay: false,
+  autoplay: true,
   autoplayButtonOutput: false,
   responsive: {
-    640: {
-      items: 1
-    },
-    700: {
-    },
-    900: {
-      items: 1
-    }
+  0: {
+    controls: false
+  },
+  576: {
+    controls:true
   }
+}
 });
