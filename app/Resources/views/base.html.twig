@@ -4,21 +4,57 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Jakub Kułaga |{% endblock %}</title>
         {% block style %}{% endblock %}
-        
+
         <link rel="stylesheet" href="{{ asset('/build/app.css') }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        <div class="portfolio">
-              <div class="globe">
-                  <section class="gallery"></section>
-                  <section class="me"></section>
-              </div>
-              <div class="you">
 
-              </div>
+    <!-- <div id="game" class="ok i cos jeszcze"></div> -->
+
+      <div class="portfolio">
+          <div class="portfolio__photoWrapper portfolio__item--photo">
+            <img class="portfolio__photo" src="{{ asset('/img/doCv.png') }}" alt="Jakub Kułaga w garniturze">
           </div>
+          <section class="portfolio__item portfolio__item--me">
+            <h1 class="portfolio__item__title portfolio__item--me__title">ja</h1>
+            <div class="portfolio__item__content portfolio__item--me__content">
+              <a class="portfolio__item__link" href="#">link do czegoś</a>
+              <a class="portfolio__item__link" href="#">krótki</a>
+              <a class="part__link" href="#">link do czegoś dłuższy</a>
+            </div>
+          </section>
+          <section class="portfolio__item portfolio__item--me">
+            <h1 class="portfolio__item__title portfolio__item--me__title">ja</h1>
+            <div class="portfolio__item__content portfolio__item--me__content">
+              <a class="portfolio__item__link" href="#">link do czegoś</a>
+              <a class="portfolio__item__link" href="#">krótki</a>
+              <a class="part__link" href="#">link do czegoś dłuższy</a>
+            </div>
+          </section>
+      </div>
+      <div class="you">
+
+      </div>
+
+
+      <!-- <div id='slider' class="slider noJS">
+        <div>
+          <div class="slide slide--1">
+            <h3 class="slide__title">
+              <a class="slide__link" href="">1 Jakiś tytuł projektu</a>
+            </h3>
+          </div>
+        </div>
+        <div>
+          <div class="slide slide--2">
+            <h3 class="slide__title">
+              <a class="slide__link" href="">2 Jakiś tytuł projektu</a>
+            </h3>
+          </div>
+        </div>
+      </div> -->
+        {% block body %}{% endblock %}
         {% block javascripts %}
             <script>
                 __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
