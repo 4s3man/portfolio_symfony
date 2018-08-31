@@ -1,65 +1,99 @@
+$main-color:#2c3e50;
+$complementary-color:#503a2c;
 .portfolio{
-  display: block;
-  background-color: #666666;
-  min-height: 400px;
+  font-size: 10px;
+  background-color: $main-color;
+  min-height: 400px; 
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 15px;
+  &__photoWrap{
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border-radius: 0px;
+    &__img{
+      position: absolute;
+      height: 100%;
+      width: auto;
+      margin: 0;
+    }
+  }
+  &__item, &__item__title, &__item__content{
+    display: block;
+    margin: 0px;
+    padding-left: 0;
+    padding-top: 0;
+  }
   &__item{
-    padding-top: 2em;
-    &--photo{
+    min-width: 60%;
+    &__title{
+      padding: 1em;
+      font-size: 2em;
+      text-transform: capitalize;
+    }
+    &__link{
+      text-decoration: none;
+      margin:0 5px;
+      color:white;
+    }
+  }
+}
+@media #{$screen_small}{
+  .portfolio{
+    display: block;
+    padding: 0px;
+    font-size: 14px;
+    &__photoWrap{
       float: left;
       width: 300px;
       height: 300px;
       border-bottom-right-radius: 300px;
       background-color: white;
-      padding: 0px;
-      // border-right: 10px solid black;
-      // border-bottom: 10px solid black;
+      box-shadow: 0px -1px 13px white;
+      border-right: 10px solid $complementary-color;
+      &__img{
+        position: relative;
+        height: auto;
+        box-shadow: 10px 10px 10px $main-color;
+        margin-left: 18px;
+        margin-top: 18px;
+      }
     }
-  //   &--me{
-  //     padding-left: 320px;
-  //     // top: 10%;
-  //     // right: 40%;
-  //   }
-  //   &--music{
-  //
-  //     // top: 70%;
-  //     // right: 40%;
-  //   }
-  //   &--you{
-  //     padding-left: 200px;
-  //   }
-  //
-  //   &__title{
-  //     font-size: 2em;
-  //     display: inline-block;
-  //     &--me, {
-  //       margin-left:-10px;
-  //     }
-  //     &--music{
-  //       margin-left: -14px;
-  //     }
-  //     &--web{
-  //       margin-left: -66px;
-  //     }
-  //     &--you{
-  //       margin-left: -160px;
-  //     }
-  //   }
-  //
-  //   &_content{
-  //     display: inline-block;
-  //   }
-  // }
-}
-.portfolio__item{
-  &--me{
-    &__title{
-      margin-left:-10px;
+    &__item{
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      margin-bottom: 0;
+      padding: 1em;
+      &:first-of-type{
+        padding-top: 20px;
+      }
+      &--me{
+        padding-left: 70px;
+      }
+      &--web{
+        padding-left: 30px;
+      }
+      &__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        &--music{
+          margin-left:-25px;
+        }
+        &--you{
+          margin-left: -60px;
+        }
+      }
+      &__content{
+        display: inline-block;
+        padding-left: 1em;
+      }
     }
-  }
-  }
-}
-
-@media #{$screen_small}{
-  .portfolio{
   }
 }

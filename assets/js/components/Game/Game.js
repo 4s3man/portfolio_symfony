@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 class Square extends React.Component{
 
     constructor(props){
@@ -40,7 +39,7 @@ class Board extends React.Component {
       squares: Array(9).fill(null),
       xIsNext: true,
     }
-    
+
   }
 
   render() {
@@ -74,7 +73,7 @@ class Board extends React.Component {
     return <Square
       value={this.state.squares[i]}
       key={i}
-      onClick={() => this.handleClick(i)}
+      onClick={this.handleClick.bind(this, i)}
     />
   }
 }
