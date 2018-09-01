@@ -1,0 +1,7 @@
+$main-color:#2c3e50;
+$main-complementary-color:#503a2c;
+body{
+  background-color: $main-color;
+}
+@import "vendor/variables";
+@import "vendor/reset";

@@ -2,11 +2,13 @@ import '../../../node_modules/tiny-slider/src/tiny-slider.scss'
 import {tns} from '../../../node_modules/tiny-slider/src/tiny-slider'
 
 var slider = tns({
-  container: '.slider',
+  container: '#slider',
   items: 1,
   slideBy: 'page',
   autoplay: true,
   autoplayButtonOutput: false,
+  axis:'vertical',
+  autoHeight:true,
   responsive: {
   0: {
     controls: false

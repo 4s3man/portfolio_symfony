@@ -13,6 +13,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-webpack": "^0.4.1",
+    "slicknav": "^1.0.8",
+    "slider-pro": "^1.4.0",
     "tiny-slider": "^2.8.5"
   },
   "scripts": {
