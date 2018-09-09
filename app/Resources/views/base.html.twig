@@ -9,115 +9,12 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body class="noJS">
-      <div class="menu">
-        <div class="menu__photo cornerPhoto">
-          <div class="cornerPhoto__wrap">
-            <img class="cornerPhoto__img" src="{{ asset('/img/doCv.png') }}" alt="Jakub Kułaga w garniturze">
-          </div>
-        </div>
-        <nav id="menu" class="menu__nav">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="">Ja</a>
-              <ul class="menu__list menu__list--inner">
-                <li><a class="menu__link menu__link--inner" href="">dono</a></li>
-                <li><a class="menu__link menu__link--inner" href="">dono</a></li>
-              </ul>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Web</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Muzyka</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="menu__slider">
-          <div class="slider" id='carousel'>
-            <div class="slider__view">
-              <div class="slider__slide">
-                <img class="slider__img" src="{{ asset('/img/Nightfall.png') }}" alt="">
-              </div>
-            </div>
-            <!-- <div class="slider__slide">
-              <img class="slider__img" src="{{ asset('/img/Nightfall.png') }}" alt="">
-            </div>
-            <div class="slider__slide">
-              <img class="slider__img" src="{{ asset('/img/Nightfall.png') }}" alt="">
-            </div>
-            <div class="slider__slide">
-              <img class="slider__img" src="{{ asset('/img/Nightfall.png') }}" alt="">
-            </div> -->
-            <!-- <div class="slide slide--1">
-              <img src="{{ asset('/img/Nightfall.png') }}" alt="">
-            </div>
-            <div class="slide slide--1">
-              <img src="{{ asset('/img/Nightfall.png') }}" alt="">
-            </div> -->
-          </div>
-        </div>
-      </div>
-
-
-    <!-- <div id="game" class="ok i cos jeszcze"></div> -->
-
-
-      <!-- <div class="portfolio">
-          <div class="portfolio__photoWrap ">
-            <img class="portfolio__photoWrap__img" src="{{ asset('/img/doCv.png') }}" alt="Jakub Kułaga w garniturze">
-          </div>
-          <section class="portfolio__item portfolio__item--me">
-            <h1 class="portfolio__item__title portfolio__item__title--me">ja</h1>
-            <div class="portfolio__item__content portfolio__item__content--me">
-              <a class="portfolio__item__link" href="#">link do czegoś</a>
-              <a class="portfolio__item__link" href="#">krótki</a>
-            </div>
-          </section>
-          <section class="portfolio__item portfolio__item--web">
-            <h1 class="portfolio__item__title portfolio__item__title--web">web</h1>
-            <div class="portfolio__item__content portfolio__item__content--web">
-              <a class="portfolio__item__link" href="#">link do czegoś</a>
-              <a class="portfolio__item__link" href="#">krótki</a>
-            </div>
-          </section>
-          <section class="portfolio__item portfolio__item--music">
-            <h1 class="portfolio__item__title portfolio__item__title--music">music</h1>
-            <div class="portfolio__item__content portfolio__item__content--music">
-              <a class="portfolio__item__link" href="#">link do czegoś</a>
-              <a class="portfolio__item__link" href="#">krótki</a>
-            </div>
-          </section>
-          <section class="portfolio__item portfolio__item--you">
-            <h1 class="portfolio__item__title portfolio__item__title--you">you</h1>
-            <div class="portfolio__item__content portfolio__item__content--you">
-              <a class="portfolio__item__link" href="#">link do czegoś</a>
-              <a class="portfolio__item__link" href="#">krótki</a>
-            </div>
-          </section>
-      </div> -->
-
-      <!-- <div id='slider' class="slider noJS">
-        <div>
-          <div class="slide slide--1">
-            <h3 class="slide__title">
-              <a class="slide__link" href="">1 Jakiś tytuł projektu</a>
-            </h3>
-          </div>
-        </div>
-        <div>
-          <div class="slide slide--2">
-            <h3 class="slide__title">
-              <a class="slide__link" href="">2 Jakiś tytuł projektu</a>
-            </h3>
-          </div>
-        </div>
-      </div> -->
-        {% block body %}{% endblock %}
-        {% block javascripts %}
+      {% block body %}
+      {% endblock %}
+      {% block javascripts %}
             <script>
                 __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
             </script>
-            <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
-        {% endblock %}
+      {% endblock %}
     </body>
 </html>

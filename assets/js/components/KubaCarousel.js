@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import TweenLite from 'gsap'
 
-const  Slide = (style, src, key, nextSlide) => {
+const Slide = (style, src, key) => {
     return (
       <div
        className='slider__slide'
@@ -31,17 +32,20 @@ export default class KubaCarousel extends Component{
     this.setState({slides:slides});
   }
 
-  componentDidMount(){
-    // this.timerId = setInterval(
-    //   () => {
-    //     this.setState({
-    //       date: new Date()
-    //     });
-    //     console.log(this);
-    //   },
-    //   1000
-    // );
+  prevSlide(){
+      let slides = [...this.state.slides];
+      slides.push(slides.shift());
+      this.setState({slides:slides});
   }
+
+  // componentDidMount(){
+  //   this.timerId = setInterval(
+  //     () => {
+  //       this.nextSlide();
+  //     },
+  //     1000
+  //   );
+  // }
 
   componentWillUnmount(){
     clearInterval(this.intervalId);
@@ -58,7 +62,7 @@ export default class KubaCarousel extends Component{
       };
       slides = [
         ...slides,
-        Slide(currentStyle, elements[i].src, i, this.nextSlide)
+        Slide(currentStyle, elements[i].src, i)
       ];
     }
 
@@ -71,7 +75,9 @@ export default class KubaCarousel extends Component{
       zIndex: 3
     };
     return (
-      <div className='slider' id='KubaCarousel' onClick={()=>{this.nextSlide()}}>
+      <div className='slider' id='KubaCarousel' onWheel={(e)=>{
+        e.deltaY>0 ? this.nextSlide() : this.prevSlide();
+      }}>
         <div className="slider__view">
           {this.createSlides(this.state.slides)}
         </div>

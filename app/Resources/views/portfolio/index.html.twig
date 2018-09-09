@@ -9,5 +9,47 @@
 {% endblock %}
 
 {% block body %}
+  <div class="menu">
+    <div class="menu__photo cornerPhoto">
+      <div class="cornerPhoto__wrap">
+        <img class="cornerPhoto__img" src="{{ asset('/img/doCv.png') }}" alt="Jakub Kułaga w garniturze">
+      </div>
+    </div>
+    <nav id="menu" class="menu__nav">
+      <ul class="menu__list">
+        {% include 'includes/menu.html.twig' with {'links':links} only %}
+      </ul>
+    </nav>
 
+    <!-- <li class="menu__item">
+      <a class="menu__link" href="">{{'menu.I'|trans}}</a>
+      <ul class="menu__list menu__list--inner">
+        <li><a class="menu__link menu__link--inner" href="">dono</a></li>
+        <li><a class="menu__link menu__link--inner" href="">dono</a></li>
+      </ul>
+    </li>
+    <hr>
+    <li class="menu__item">
+      <a class="menu__link" href="">Web</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="">Muzyka</a>
+    </li> -->
+
+
+
+    <div class="menu__slider">
+      <div class="slider" id='carousel'>
+        <div class="slider__view">
+          <div class="slider__slide">
+            <img class="slider__img" src="{{ asset('/img/Nightfall.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
 {% endblock %}
