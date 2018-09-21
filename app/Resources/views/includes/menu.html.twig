@@ -5,7 +5,7 @@
 
 {%for link in links %}
 <li class="menu__item">
-  <a class="menu__link {{innerStyle|default('')}}" href="">{{link.name|trans}}</a>
+  <a id='{{link.id}}' class="menu__link {{innerStyle|default('')}}" href="{{ link.src }}">{{link.name|trans}}</a>
   {% if link.sublinks is defined %}
     <ul class="menu__list menu__list--inner">
       {% include "includes/menu.html.twig" with {'links': link.sublinks, 'innerStyle': 'menu__link--inner'} %}

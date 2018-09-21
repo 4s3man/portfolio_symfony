@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block style %}
-
+  <link rel="stylesheet" href="{{ asset('/build/homepage.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -21,23 +21,6 @@
       </ul>
     </nav>
 
-    <!-- <li class="menu__item">
-      <a class="menu__link" href="">{{'menu.I'|trans}}</a>
-      <ul class="menu__list menu__list--inner">
-        <li><a class="menu__link menu__link--inner" href="">dono</a></li>
-        <li><a class="menu__link menu__link--inner" href="">dono</a></li>
-      </ul>
-    </li>
-    <hr>
-    <li class="menu__item">
-      <a class="menu__link" href="">Web</a>
-    </li>
-    <li class="menu__item">
-      <a class="menu__link" href="">Muzyka</a>
-    </li> -->
-
-
-
     <div class="menu__slider">
       <div class="slider" id='carousel'>
         <div class="slider__view">
@@ -48,8 +31,12 @@
       </div>
     </div>
   </div>
+
+  <div id='contentBelt' class="contentBelt">
+
+  </div>
 {% endblock %}
 
 {% block javascripts %}
-  <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('build/homepage.js') }}"></script>
 {% endblock %}
